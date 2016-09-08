@@ -1,0 +1,4 @@
+//TODO: Refactor the UI
+//TODO: Documentation project
+//TODO: Implementing differnt engines in Statics
+//TODO: Plugin system

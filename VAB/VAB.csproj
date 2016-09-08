@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5E7AEFE3-1655-4E7C-9EAE-6D41D302987A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VAB</RootNamespace>
+    <AssemblyName>VAB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TemplateBase\TemplateBase.csproj">
+      <Project>{630CE821-09B9-456F-BE4B-7F3471627380}</Project>
+      <Name>TemplateBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builder\Statics.cs" />
+    <Compile Include="Builder\InsertionUnit.cs" />
+    <Compile Include="Builder\InsertionUnitBase.cs" />
+    <Compile Include="Builder\TemplateUnitBase.cs" />
+    <Compile Include="Builder\TemplateUnitCs.cs" />
+    <Compile Include="Builder\TemplateUnitTxt.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Ui\ToxicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\ToxicForm.Designer.cs">
+      <DependentUpon>ToxicForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Templates\Decrypt.cs" />
+    <EmbeddedResource Include="Templates\LuheFiha.cs" />
+    <EmbeddedResource Include="Templates\Message.cs" />
+    <Compile Include="Ui\InsertionControls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ui\InsertionPanelBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ui\ToxicFormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\ToxicFormMain.Designer.cs">
+      <DependentUpon>ToxicFormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\ToxicFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ui\icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
